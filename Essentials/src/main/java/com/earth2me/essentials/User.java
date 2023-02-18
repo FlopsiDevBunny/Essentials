@@ -515,7 +515,7 @@ public class User extends UserData implements Comparable<User>, IMessageRecipien
 
     public void setDisplayNick() {
         if (base.isOnline() && ess.getSettings().changeDisplayName()) {
-            this.getBase().setDisplayName(getNick(true));
+            this.getBase().setDisplayName(getNick(false, false));
             if (isAfk()) {
                 updateAfkListName();
             } else if (ess.getSettings().changePlayerListName()) {
